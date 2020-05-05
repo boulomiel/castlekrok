@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OJc-Oa-SKX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="Login" title="Login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginViewController" customModule="CastleKrok" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="75" translatesAutoresizingMaskIntoConstraints="NO" id="Chj-2E-7r2">
+                                <rect key="frame" x="16" y="304" width="382" height="248"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3jv-Re-f3c" customClass="ToolBarTextField" customModule="CastleKrok" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="0.0" width="350" height="34"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Nickname"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
+                                        <connections>
+                                            <action selector="didEndOnExit:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="zVD-7M-Khh"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VRT-1F-yfe" userLabel="Password" customClass="ToolBarTextField" customModule="CastleKrok" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="109" width="350" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                        <connections>
+                                            <action selector="didEndOnExit:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="Ys9-kM-4bK"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJc-Ep-UB8">
+                                        <rect key="frame" x="16" y="218" width="350" height="30"/>
+                                        <state key="normal" title="Login"/>
+                                        <connections>
+                                            <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BD0-hP-UKw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="VRT-1F-yfe" secondAttribute="trailing" constant="16" id="2Rl-yC-bWz"/>
+                                    <constraint firstItem="VRT-1F-yfe" firstAttribute="leading" secondItem="Chj-2E-7r2" secondAttribute="leading" constant="16" id="Abh-DC-KYs"/>
+                                    <constraint firstItem="YJc-Ep-UB8" firstAttribute="top" secondItem="VRT-1F-yfe" secondAttribute="bottom" constant="75" id="DV7-hR-9CX"/>
+                                    <constraint firstItem="3jv-Re-f3c" firstAttribute="leading" secondItem="Chj-2E-7r2" secondAttribute="leading" constant="16" id="NJu-t5-6zP"/>
+                                    <constraint firstItem="YJc-Ep-UB8" firstAttribute="leading" secondItem="Chj-2E-7r2" secondAttribute="leading" constant="16" id="Q4k-Ob-GyK"/>
+                                    <constraint firstAttribute="trailing" secondItem="3jv-Re-f3c" secondAttribute="trailing" constant="16" id="Xe1-Dk-HL4"/>
+                                    <constraint firstAttribute="trailing" secondItem="YJc-Ep-UB8" secondAttribute="trailing" constant="16" id="sFu-9S-H2r"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Chj-2E-7r2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="KMx-4x-fPD"/>
+                            <constraint firstItem="Chj-2E-7r2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="216" id="N7C-zG-ppT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Chj-2E-7r2" secondAttribute="trailing" constant="16" id="xfu-uB-nVd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="FLJ-PW-gFd" appends="YES" id="V0C-s0-IFE"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Log in" id="VpI-1D-b8N">
+                        <barButtonItem key="backBarButtonItem" title="Log in" id="hKG-gG-9a3"/>
+                        <barButtonItem key="rightBarButtonItem" title="Register" id="1jE-Gr-owX">
+                            <connections>
+                                <segue destination="uyE-bE-V5b" kind="show" identifier="register" id="fgO-Id-ESC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="email" destination="3jv-Re-f3c" id="phs-85-3vg"/>
+                        <outlet property="password" destination="VRT-1F-yfe" id="Sib-H1-YGB"/>
+                        <outlet property="stackView" destination="Chj-2E-7r2" id="ljD-5J-gLd"/>
+                        <outlet property="stackViewTopLayout" destination="N7C-zG-ppT" id="ueA-B2-c42"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="FLJ-PW-gFd">
+                    <connections>
+                        <action selector="tapAction:" destination="BYZ-38-t0r" id="wfj-1I-KaS"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1050.7246376811595" y="95.758928571428569"/>
+        </scene>
+        <!--Register-->
+        <scene sceneID="XQM-Ec-DjM">
+            <objects>
+                <viewController storyboardIdentifier="register" title="Register" id="uyE-bE-V5b" customClass="RegisterViewController" customModule="CastleKrok" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bP2-yP-GpM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="2Ue-n4-E3J">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="G0x-dM-D2v">
+                                        <rect key="frame" x="16" y="190" width="382" height="294"/>
+                                        <subviews>
+                                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aFZ-Of-T7h" customClass="ToolBarTextField" customModule="CastleKrok" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
+                                                <connections>
+                                                    <action selector="didEndOnExit:" destination="uyE-bE-V5b" eventType="editingDidEndOnExit" id="jDe-Tj-az5"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" tag="2" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nickname" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wmp-KX-AF7" customClass="ToolBarTextField" customModule="CastleKrok" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="66" width="382" height="34"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Nickname"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
+                                                <connections>
+                                                    <action selector="didEndOnExit:" destination="uyE-bE-V5b" eventType="editingDidEndOnExit" id="CfN-WI-aUk"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A2z-kY-tgV" customClass="ToolBarTextField" customModule="CastleKrok" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="132" width="382" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <action selector="didEndOnExit:" destination="uyE-bE-V5b" eventType="editingDidEndOnExit" id="rCg-LR-Zeb"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Retype password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OQf-xh-ZO4" customClass="ToolBarTextField" customModule="CastleKrok" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="198" width="382" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                <connections>
+                                                    <action selector="didEndOnExit:" destination="uyE-bE-V5b" eventType="editingDidEndOnExit" id="thQ-MM-hQP"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzV-b6-BIl">
+                                                <rect key="frame" x="0.0" y="264" width="382" height="30"/>
+                                                <state key="normal" title="register"/>
+                                                <connections>
+                                                    <action selector="registerAction:" destination="uyE-bE-V5b" eventType="touchUpInside" id="nY2-qw-npM"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="OCd-PA-4Yn" firstAttribute="trailing" secondItem="G0x-dM-D2v" secondAttribute="trailing" constant="16" id="E3H-rn-HTQ"/>
+                                    <constraint firstItem="G0x-dM-D2v" firstAttribute="leading" secondItem="OCd-PA-4Yn" secondAttribute="leading" constant="16" id="FP7-NO-rsZ"/>
+                                    <constraint firstItem="OCd-PA-4Yn" firstAttribute="trailing" secondItem="G0x-dM-D2v" secondAttribute="trailing" constant="16" id="WHc-Jw-mpZ"/>
+                                    <constraint firstItem="G0x-dM-D2v" firstAttribute="top" secondItem="OCd-PA-4Yn" secondAttribute="top" constant="102" id="ZOz-BP-AgZ"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="OCd-PA-4Yn"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="tSL-uu-CYa" appends="YES" id="wbI-rf-uOi"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Dsu-hP-gz9"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Register" id="NEB-7L-A4f"/>
+                    <connections>
+                        <outlet property="email" destination="aFZ-Of-T7h" id="nWi-dD-fgg"/>
+                        <outlet property="nickName" destination="wmp-KX-AF7" id="j3k-ww-FFv"/>
+                        <outlet property="password" destination="A2z-kY-tgV" id="urn-TZ-6eJ"/>
+                        <outlet property="retypePass" destination="OQf-xh-ZO4" id="Cec-qz-2W3"/>
+                        <outlet property="stackTopLayout" destination="ZOz-BP-AgZ" id="Fia-eU-2IB"/>
+                        <outlet property="stackView" destination="G0x-dM-D2v" id="3Ja-fP-M0e"/>
+                        <outlet property="view" destination="2Ue-n4-E3J" id="x2b-Kf-GK9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v0Y-kc-Dpp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="tSL-uu-CYa">
+                    <connections>
+                        <action selector="tapAction:" destination="uyE-bE-V5b" id="AlU-IU-woa"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2323" y="96"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fsM-hF-Yiz">
+            <objects>
+                <navigationController storyboardIdentifier="Auth" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OJc-Oa-SKX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Yo1-nq-O5b">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="sgy-vu-enJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fN3-a1-DVZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="95.758928571428569"/>
+        </scene>
+    </scenes>
+</document>
